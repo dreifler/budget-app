@@ -29,12 +29,12 @@ class Header extends Component {
         return(
             <Navbar color="light" light expand="md">
                 <NavbarBrand href={this.props.auth ? "/dashboard" : "/"}>
-                    Fight Game
+                    Budget App(DEV)
                 </NavbarBrand>
                 <Nav className="container">
                     <NavItem className="m-auto">
-                        <NavLink href="/profile">
-                            <h1>{this.props.auth.gymName}</h1>
+                        <NavLink href="/dashboard">
+                            <h1>{this.props.auth.userName}</h1>
                         </NavLink>
                     </NavItem>
                 </Nav>

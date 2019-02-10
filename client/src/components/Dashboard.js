@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {
+    Jumbotron
+} from 'reactstrap';
 
-const Dashboard = () => {
-    return (
-        <div className="container">
-            <div className="row justify-content-center">
-                <h2 className="align-self-center">Dashboard</h2>
+
+class Dashboard extends Component {
+    render() {
+        return (
+            <div>
+                <Jumbotron>
+                    <div className="row justify-content-center">
+                        <h2 className="align-self-center">Dashboard</h2>
+                    </div>
+                </Jumbotron>
             </div>
-        </div>
-    )
-};
+        )
+    }
+}
 
-export default Dashboard;
+function mapStateToProps({ auth }) {
+    return { auth };
+}
+
+export default connect(mapStateToProps)(Dashboard);

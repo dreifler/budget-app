@@ -6,7 +6,6 @@ import * as actions from '../actions';
 import Header from './Header';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
-import ManagerPage from './ManagerPage';
 import Profile from './Profile';
 
 class App extends Component {
@@ -21,8 +20,7 @@ class App extends Component {
                     <Header/>
                     <Route exact path="/" component={Landing}/>
                     <Route exact path="/dashboard" component={Dashboard}/>
-                    <Route path="/managerPage" component={ManagerPage}/>
-                    <Route path="/profile" component={Profile}/>
+                    <Route path="/dashboard" component={Profile}/>
                 </div>
             </BrowserRouter>
         );

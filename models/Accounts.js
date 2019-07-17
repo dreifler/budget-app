@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const AccountSchema = require('./Account');
 
-const userSchema = new Schema({
+const accountsSchema = new Schema({
     _user: { type: Schema.Types.ObjectId, ref: 'User' },
     accounts: [AccountSchema]
 });
 
-mongoose.model('users', userSchema);
+mongoose.model('accounts', accountsSchema);

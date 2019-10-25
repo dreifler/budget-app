@@ -6,9 +6,7 @@ import * as actions from '../actions';
 import Header from './Header';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
-import Profile from './Profile';
 import AccountNew from './accounts/AccountNew';
-import AccountEdit from './accounts/AccountEdit';
 
 
 class App extends Component {
@@ -25,7 +23,6 @@ class App extends Component {
                         <Route exact path="/" component={Landing}/>
                         <Route exact path="/dashboard" component={Dashboard}/>
                         <Route path="/accounts/new" component={AccountNew}/>
-                        <Route path="/accounts/edit/:id" component={AccountEdit}/>
                     </div>
                 </div>
             </BrowserRouter>

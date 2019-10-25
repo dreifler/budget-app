@@ -17,7 +17,6 @@ class BankAccountList extends Component {
                     return (
                         <div className="list-group" key={account._id}>
                             <li className="list-group-item">${account.amount} {account.accountName}</li>
-                            <Link to={"/edit/" + this.props.obj._id} className="float-right btn btn-primary">Edit</Link>
                         </div>
                     );
             }

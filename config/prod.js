@@ -5,5 +5,6 @@ module.exports = {
     cookieKey: process.env.COOKIE_KEY,
     googleRedirectURI: 'https://fighting-game-dev.herokuapp.com',
     stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-    stripeSecretKey: process.env.STRIPE_SECRET_KEY
+    stripeSecretKey: process.env.STRIPE_SECRET_KEY,
+    redirectDomain: process.env.REDIRECT_DOMAIN
 };

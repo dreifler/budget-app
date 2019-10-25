@@ -2,7 +2,11 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const accountSchema = new Schema({
-    name: String
+    accountName: String,
+    type: String,
+    amount: Number,
+    _user: { type: Schema.Types.ObjectId, ref: 'User' },
+    dateCreated: Date
 });
 
-mongoose.model('account', accountSchema);
+mongoose.model('accounts', accountSchema);

@@ -7,6 +7,9 @@ import Header from './Header';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
 import Profile from './Profile';
+import AccountNew from './accounts/AccountNew';
+import AccountEdit from './accounts/AccountEdit';
+
 
 class App extends Component {
     componentDidMount() {
@@ -18,9 +21,12 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <Header/>
-                    <Route exact path="/" component={Landing}/>
-                    <Route exact path="/dashboard" component={Dashboard}/>
-                    <Route path="/dashboard" component={Profile}/>
+                    <div className="container">
+                        <Route exact path="/" component={Landing}/>
+                        <Route exact path="/dashboard" component={Dashboard}/>
+                        <Route path="/accounts/new" component={AccountNew}/>
+                        <Route path="/accounts/edit/:id" component={AccountEdit}/>
+                    </div>
                 </div>
             </BrowserRouter>
         );
